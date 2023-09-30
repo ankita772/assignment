@@ -1,0 +1,160 @@
+{
+  "info": {
+    "_postman_id": "2e58e7a0-fef9-4f1e-a325-9d6b2a18fa53",
+    "name": "Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30082014"
+  },
+  "item": [
+    {
+      "name": "insert user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoic2FuQDEyMyIsInVzZXJfcGFzc3dvcmQiOiJUZXN0MTIxMiIsImlhdCI6MTY5NjAwMjAwMywiZXhwIjoxNjk2MDg4NDAzfQ.DLX4S2teYuUrKyvY1uBTSNEW6VErTb7W6QCVFWDapG4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "userName",
+              "value": "ankita",
+              "type": "text"
+            },
+            {
+              "key": "userEmail",
+              "value": "test@test.com",
+              "type": "text"
+            },
+            {
+              "key": "userPassword",
+              "value": "Test1212",
+              "type": "text"
+            },
+            {
+              "key": "total_orders",
+              "value": "10",
+              "type": "text"
+            },
+            {
+              "key": "profile_image",
+              "type": "file",
+              "src": "AfRViEhNo/leaf.svg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/insert",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["insert"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoic2FuQDEyMyIsInVzZXJfcGFzc3dvcmQiOiJUZXN0MTIxMiIsImlhdCI6MTY5NjAwMjAwMywiZXhwIjoxNjk2MDg4NDAzfQ.DLX4S2teYuUrKyvY1uBTSNEW6VErTb7W6QCVFWDapG4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "userId",
+              "value": "80bdb4fa-28a1-4ac8-98b8-1ed147c63834",
+              "type": "text"
+            },
+            {
+              "key": "user_image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "totalOrders",
+              "value": "20",
+              "type": "text"
+            },
+            {
+              "key": "userName",
+              "value": "ankita test",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/update",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["update"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-user",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/details/80bdb4fa-28a1-4ac8-98b8-1ed147c63834",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["details", "80bdb4fa-28a1-4ac8-98b8-1ed147c63834"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete-user",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/delete/80bdb4fa-28a1-4ac8-98b8-1ed147c63834",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["delete", "80bdb4fa-28a1-4ac8-98b8-1ed147c63834"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-user-img",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/image/80bdb4fa-28a1-4ac8-98b8-1ed147c63834",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["image", "80bdb4fa-28a1-4ac8-98b8-1ed147c63834"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
